@@ -38,10 +38,7 @@ public class FirstPersonCamera : MonoBehaviour
         float moveHoriz = Input.GetAxis("Horizontal");
         float moveVert = Input.GetAxis("Vertical");
 
-        Vector3 move = new Vector3(moveHoriz, gravity, moveVert);
-        //target.transform.right = new Vector3(moveHoriz, 0, 0) * speed;
-        //target.transform.forward = new Vector3(0, 0, moveVert) * speed;
-        GetComponent<Rigidbody>().velocity = move * speed;
+        transform.translate(moveHoriz, 0, moveVert);
     }
 
 
